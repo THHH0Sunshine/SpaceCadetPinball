@@ -73,8 +73,14 @@
 
     <script type='text/javascript'>
         function touchToKey(element, eventInit) {
-            const down = () => { window.dispatchEvent(new KeyboardEvent('keydown', eventInit)) }
-            const up = () => { window.dispatchEvent(new KeyboardEvent('keyup', eventInit)) }
+            const down = e => {
+                e.preventDefault()
+                window.dispatchEvent(new KeyboardEvent('keydown', eventInit))
+            }
+            const up = e => {
+                e.preventDefault()
+                window.dispatchEvent(new KeyboardEvent('keyup', eventInit))
+            }
             element.addEventListener('touchstart', down)
             element.addEventListener('touchend', up)
             element.addEventListener('touchcancel', up)
