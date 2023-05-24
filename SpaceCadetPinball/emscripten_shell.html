@@ -19,6 +19,7 @@
         }
 
         .side {
+            padding: 0 2vw;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -34,6 +35,11 @@
         #key-z,
         #key-slash {
             background-color: rgb(220, 255, 220);
+        }
+
+        #key-x,
+        #key-dot {
+            background-color: rgb(255, 220, 255);
         }
 
         #key-f2,
@@ -56,6 +62,7 @@
     <div class="main">
         <div class="side">
             <div class="button" id="key-f2"><div>F2</div></div>
+            <div class="button" id="key-x"><div>TILT</div></div>
             <div class="button" id="key-z"><div>LEFT</div></div>
         </div>
         <div>
@@ -67,6 +74,7 @@
         </div>
         <div class="side">
             <div class="button" id="key-space"><div>SPACE</div></div>
+            <div class="button" id="key-dot"><div>TILT</div></div>
             <div class="button" id="key-slash"><div>RIGHT</div></div>
         </div>
     </div>
@@ -87,6 +95,8 @@
         }
         touchToKey(document.getElementById('key-z'), { code: 'KeyZ', key: 'z', keyCode: 90, which: 90 })
         touchToKey(document.getElementById('key-slash'), { code: 'Slash', key: '/', keyCode: 191, which: 191 })
+        touchToKey(document.getElementById('key-x'), { code: 'KeyX', key: 'x', keyCode: 88, which: 88 })
+        touchToKey(document.getElementById('key-dot'), { code: 'Period', key: '.', keyCode: 190, which: 190 })
         touchToKey(document.getElementById('key-f2'), { code: 'F2', key: 'F2', keyCode: 113, which: 113 })
         touchToKey(document.getElementById('key-space'), { code: 'Space', key: ' ', keyCode: 32, which: 32 })
 
